@@ -35,7 +35,9 @@ label {
 }
 
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="email"],
+input[type="file"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -61,4 +63,11 @@ button:hover {
     color: red;
     font-weight: bold;
     text-align: center;
+}
+
+#passwordMessage {
+    color: #555;
+    font-size: 14px;
+    text-align: left;
+    margin-top: 5px;
 }
