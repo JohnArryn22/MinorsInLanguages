@@ -1,0 +1,19 @@
+.calendar {
+	font-family: Arial, sans-serif;
+	text-align: center;
+}
+.calendar-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+}
+.calendar-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+.calendar-table th,
+.calendar-table td {
+	padding: 10px;
+	border: 1px solid #ccc;
+}
