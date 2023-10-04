@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Simple JavaScript Calendar</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="calendar">
+			<div class="calendar-header">
+				<button id="prev-month">Previous</button>
+				<h2 id="current-month"></h2>
+				<button id="next-month">Next</button>
+			</div>
+			<table class="calendar-table" id="calendar-table">
+				<thead>
+					<tr>
+						<th>Sun</th>
+						<th>Mon</th>
+						<th>Tue</th>
+						<th>Wed</th>
+						<th>Thu</th>
+						<th>Fri</th>
+						<th>Sat</th>
+					</tr>
+				</thead>
+				<tbody id="calendar-body"></tbody>
+			</table>
+		</div>
+		<script defer src="script.js"></script>
+	</body>
+</html>
