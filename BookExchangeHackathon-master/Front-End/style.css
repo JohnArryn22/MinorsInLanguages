@@ -1,0 +1,13 @@
+.nav-color{
+    background-color: rgb(161, 237, 247) !important;  
+}
+ .button-center {
+    display: flex;
+    justify-content: center;
+ }
+ .mhover:hover{
+    background-color: rgb(50, 213, 102) !important;
+ }
+ body{
+    background-color: black;
+ }

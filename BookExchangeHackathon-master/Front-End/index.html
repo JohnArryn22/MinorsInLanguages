@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Exchange</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+   <script src="https://kit.fontawesome.com/921e89acba.js" crossorigin="anonymous"></script>
+   <script src="script.js"></script>
+  
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="style-main.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg nav-color nwidth">
+    <div class="container-fluid">
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="container w-75">
+        <a class="navbar-brand logo-class" href="#">
+            <img src="images/logo.png" alt="logo" height="50 px" width="240 px" >
+        </a>
+      </div>
+     
+      <div class="collapse navbar-collapse  "  id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+         
+      
+          <li class="nav-item ">
+            <a class="nav-link " aria-current="page" href="#" >About Us</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link " href="#">Contact us</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link " aria-current="page" href="Signup-Page-main/signup.html" >Sign up</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link " data-bs-toggle="modal"  type ="button"data-bs-target="#enroll" >Sign in</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="modal fade" id="enroll" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Sign in as</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="button-center">
+            <div>
+              <button class="btn btn-dark mhover"  data-bs-toggle="modal"  data-bs-target="#admin" type="button">Admin</button>
+              <button class="btn btn-dark mhover"  data-bs-toggle="modal"  data-bs-target="#customer" type="button">Customer</button>   
+            </div>
+          </div>         
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Button trigger modal -->
+
+<!-- admin -->
+<div class="modal fade" id="admin" tabindex="-1" aria-labelledby="admin" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="admin">Welcome</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-3 align-items-center">
+          <form >
+            <label for="username" class="col-form-label">Email</label>
+            <input type="email" id="myemail1"class=form-control>
+            <label for="password" class="col-form-label">Password</label>
+            <input type="password" id="mypassword"class=form-control>
+          <div class="col-auto mb-3">
+            <span id="passwordHelpInline" class="form-text">
+              Must be 8-20 characters long special characters allowed.
+            </span>
+          </div>
+          <button type="button" class="btn btn-danger " ><a href="admin.html"> Login</a></button>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Customer-->
+<div class="modal fade " id="customer" tabindex="-1" aria-labelledby="customer" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="customer">Welcome</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-3 align-items-center">
+          <form >
+            <label for="username" class="col-form-label">Email</label>
+            <input type="email" id="myemail"class=form-control>
+            <label for="password" class="col-form-label">Password</label>
+            <input type="password" id="mypassword"class=form-control>
+          <div class="col-auto mb-3">
+            <span id="passwordHelpInline" class="form-text">
+              Must be 8-20 characters long.
+            </span>
+          </div>
+          <button type="button" class="btn btn-danger ">Login</button>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="main">
+        <div class="main-tag">
+            <h1>Welcome To <br><span>Book Exchange</span></h1>
+            <p>
+              "In A Word, Books Are My Utopia" <br> This Store Is For Those Who Have Such Thoughts.. <br> A Store For The Nerds, From The Nerds, To Share The Joy Of Reading.
+            </p>
+    
+            <a href="#" class="main-btn" >Learn More</a>
+         </div>
+         
+         <div class="main-img">
+            <img src="./images/Book Store Website Part 1/Book Store Website Part 1/image/table.png">
+         </div>
+
+      </div>
+
+      <div class="services">
+        <div class="service-box">
+          <div class="service-card">
+            <i class="fa-solid fa-truck-fast"></i>
+            <h3>Fast Delivery</h3>
+            <p>We Are On Time, Faster Than You Can Imagine.</p>
+          </div>
+          <div class="service-card">
+            <i class="fa-solid fa-headset"></i>
+            <h3>24 * 7 Services</h3>
+            <p>We Are Available 24 Hours For 7 Days A Week For You.</p>
+          </div>
+          <div class="service-card">
+            <i class="fa-solid fa-tag"></i>
+            <h3>Best Deal</h3>
+            <p>You Get The Best Deal Here, Cheap Books With Best Quality.</p>
+          </div>
+          <div class="service-card">
+            <i class="fa-solid fa-lock"></i>
+            <h3>Secure Payment</h3>
+            <p>Your Payment Will Be Safe And Secure With Us.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="about">
+        <div class="about-image">
+          <img src="images/Book Store Website Part 1/Book Store Website Part 1/image/about.png" alt="#">
+        </div>
+        <div class="about-tag">
+          <h1>About Us</h1>
+          <p> We are BookSwap. We provide an online networking platform for nerds to connect with each other having similar interests . Through BookSwap, we provide easy and affordable access to costly and somewhat rare novels out there by building a community of bibliophiles.</p>
+          <a href="#" class="about-btn">Learn More</a>
+        </div>
+      </div>
+
+      <div class="featured-books">
+        <h1>Featured Books</h1>
+        <div class="featured-book-box">
+          <div class="featured-book-card">
+            <div class="featured-book-img">
+              <img src="images/Book Store Website Part 1/Book Store Website Part 1/image/book_1.jpg" alt="#">
+            </div>
+            <div class="featured-book-tag">
+              <h2>CocoGoose</h2>
+              <p class="writer">John Deo</p>
+              <div class="categories">Thriller,Horror,Romance</div>
+              <p class="book-price">$25.50 <sub><del>$28.50</del></sub></p>
+            </div>
+          </div>
+          <div class="featured-book-card">
+            <div class="featured-book-img">
+              <img src="images/Book Store Website Part 1/Book Store Website Part 1/image/book_2.jpg" alt="#">
+            </div>
+            <div class="featured-book-tag">
+              <h2>SubLetter</h2>
+              <p class="writer">John Deo</p>
+              <div class="categories">Thriller,Horror,Romance</div>
+              <p class="book-price">$25.50 <sub><del>$28.50</del></sub></p>
+            </div>
+          </div>
+          <div class="featured-book-card">
+            <div class="featured-book-img">
+              <img src="images/Book Store Website Part 1/Book Store Website Part 1/image/book_3.jpg" alt="#">
+            </div>
+            <div class="featured-book-tag">
+              <h2>Wespart</h2>
+              <p class="writer">John Deo</p>
+              <div class="categories">Thriller,Horror,Romance</div>
+              <p class="book-price">$25.50 <sub><del>$28.50</del></sub></p>
+            </div>
+          </div>
+          <div class="featured-book-card">
+            <div class="featured-book-img">
+              <img src="images/Book Store Website Part 1/Book Store Website Part 1/image/book_4.jpg" alt="#">
+            </div>
+            <div class="featured-book-tag">
+              <h2>Beautifully Delicious</h2>
+              <p class="writer">John Deo</p>
+              <div class="categories">Thriller,Horror,Romance</div>
+              <p class="book-price">$25.50 <sub><del>$28.50</del></sub></p>
+            </div>
+          </div>
+          <div class="featured-book-card">
+            <div class="featured-book-img">
+              <img src="images/Book Store Website Part 1/Book Store Website Part 1/image/book_5.jpg" alt="#">
+            </div>
+            <div class="featured-book-tag">
+              <h2>Clever Lands</h2>
+              <p class="writer">John Deo</p>
+              <div class="categories">Thriller,Horror,Romance</div>
+              <p class="book-price">$25.50 <sub><del>$28.50</del></sub></p>
+            </div>
+          </div>
+          <div class="featured-book-card">
+            <div class="featured-book-img">
+              <img src="images/Book Store Website Part 1/Book Store Website Part 1/image/book_6.jpg" alt="#">
+            </div>
+            <div class="featured-book-tag">
+              <h2>Shattered</h2>
+              <p class="writer">John Deo</p>
+              <div class="categories">Thriller,Horror,Romance</div>
+              <p class="book-price">$25.50 <sub><del>$28.50</del></sub></p>
+            </div>
+          </div>
+          <div class="featured-book-card">
+            <div class="featured-book-img">
+              <img src="images/Book Store Website Part 1/Book Store Website Part 1/image/book_7.png" alt="#">
+            </div>
+            <div class="featured-book-tag">
+              <h2>The Art City</h2>
+              <p class="writer">John Deo</p>
+              <div class="categories">Thriller,Horror,Romance</div>
+              <p class="book-price">$25.50 <sub><del>$28.50</del></sub></p>
+            </div>
+          </div>
+          <div class="featured-book-card">
+            <div class="featured-book-img">
+              <img src="images/Book Store Website Part 1/Book Store Website Part 1/image/book_8.png" alt="#">
+            </div>
+            <div class="featured-book-tag">
+              <h2>Music Rod</h2>
+              <p class="writer">John Deo</p>
+              <div class="categories">Thriller,Horror,Romance</div>
+              <p class="book-price">$25.50 <sub><del>$28.50</del></sub></p>
+            </div>
+          </div>
+          <div class="featured-book-card">
+            <div class="featured-book-img">
+              <img src="images/Book Store Website Part 1/Book Store Website Part 1/image/book_9.jpg" alt="#">
+            </div>
+            <div class="featured-book-tag">
+              <h2>FreeFall</h2>
+              <p class="writer">John Deo</p>
+              <div class="categories">Thriller,Horror,Romance</div>
+              <p class="book-price">$25.50 <sub><del>$28.50</del></sub></p>
+            </div>
+          </div>
+          <div class="featured-book-card">
+            <div class="featured-book-img">
+              <img src="images/Book Store Website Part 1/Book Store Website Part 1/image/book_10.png" alt="#">
+            </div>
+            <div class="featured-book-tag">
+              <h2>Sample Text</h2>
+              <p class="writer">John Deo</p>
+              <div class="categories">Thriller,Horror,Romance</div>
+              <p class="book-price">$25.50 <sub><del>$28.50</del></sub></p>
+            </div>
+          </div>
+          <div class="featured-book-card">
+            <div class="featured-book-img">
+              <img src="images/Book Store Website Part 1/Book Store Website Part 1/image/book_11.jpg" alt="#">
+            </div>
+            <div class="featured-book-tag">
+              <h2>Boring Girls</h2>
+              <p class="writer">John Deo</p>
+              <div class="categories">Thriller,Horror,Romance</div>
+              <p class="book-price">$25.50 <sub><del>$28.50</del></sub></p>
+            </div>
+          </div>
+          <div class="featured-book-card">
+            <div class="featured-book-img">
+              <img src="images/Book Store Website Part 1/Book Store Website Part 1/image/book_12.png" alt="#">
+            </div>
+            <div class="featured-book-tag">
+              <h2>Thanks In Everything</h2>
+              <p class="writer">John Deo</p>
+              <div class="categories">Thriller,Horror,Romance</div>
+              <p class="book-price">$25.50 <sub><del>$28.50</del></sub></p>
+            </div>
+          </div>
+          <div class="featured-book-card">
+            <div class="featured-book-img">
+              <img src="images/Book Store Website Part 1/Book Store Website Part 1/image/book_13.png" alt="#">
+            </div>
+            <div class="featured-book-tag">
+              <h2>Your Title Goes Here</h2>
+              <p class="writer">John Deo</p>
+              <div class="categories">Thriller,Horror,Romance</div>
+              <p class="book-price">$25.50 <sub><del>$28.50</del></sub></p>
+            </div>
+          </div>
+          <div class="featured-book-card">
+            <div class="featured-book-img">
+              <img src="images/Book Store Website Part 1/Book Store Website Part 1/image/book_14.png" alt="#">
+            </div>
+            <div class="featured-book-tag">
+              <h2>Sample Text</h2>
+              <p class="writer">John Deo</p>
+              <div class="categories">Thriller,Horror,Romance</div>
+              <p class="book-price">$25.50 <sub><del>$28.50</del></sub></p>
+            </div>
+          </div>
+          <div class="featured-book-card">
+            <div class="featured-book-img">
+              <img src="images/Book Store Website Part 1/Book Store Website Part 1/image/book_15.png" alt="#">
+            </div>
+            <div class="featured-book-tag">
+              <h2>Black History Month</h2>
+              <p class="writer">John Deo</p>
+              <div class="categories">Thriller,Horror,Romance</div>
+              <p class="book-price">$25.50 <sub><del>$28.50</del></sub></p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+
+      <div class="arrivals">
+        <h1>New Arrivals</h1>
+        <div class="arrivals-box">
+          <div class="arrivals-card">
+            <div class="arrivals-image">
+              <img src="images/Book Store Website Part 1/Book Store Website Part 1/image/arrival_1.jpg" alt="#">
+            </div>
+            <div class="arrivals-tag">
+              <p>The Giver</p>
+              <div class="arrivals-icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>
+              </div>
+            </div>
+          </div>
+          <div class="arrivals-card">
+            <div class="arrivals-image">
+              <img src="images/Book Store Website Part 1/Book Store Website Part 1/image/arrival_2.jpg" alt="#">
+            </div>
+            <div class="arrivals-tag">
+              <p>The Wright Brothers
+              <div class="arrivals-icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>
+              </div>
+            </div>
+          </div>
+          <div class="arrivals-card">
+            <div class="arrivals-image">
+              <img src="images/Book Store Website Part 1/Book Store Website Part 1/image/arrival_3.jpg" alt="#">
+            </div>
+            <div class="arrivals-tag">
+              <p>Radical Gardening</p>
+              <div class="arrivals-icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>
+              </div>
+            </div>
+          </div>
+          <div class="arrivals-card">
+            <div class="arrivals-image">
+              <img src="images/Book Store Website Part 1/Book Store Website Part 1/image/arrival_4.jpg" alt="#">
+            </div>
+            <div class="arrivals-tag">
+              <p>Red Queen</p>
+              <div class="arrivals-icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>
+              </div>
+            </div>
+          </div>
+          <div class="arrivals-card">
+            <div class="arrivals-image">
+              <img src="images/Book Store Website Part 1/Book Store Website Part 1/image/arrival_5.jpg" alt="#">
+            </div>
+            <div class="arrivals-tag">
+              <p>To Kill A Mockingbird</p>
+              <div class="arrivals-icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>
+              </div>
+            </div>
+          </div>
+          <div class="arrivals-card">
+            <div class="arrivals-image">
+              <img src="images/Book Store Website Part 1/Book Store Website Part 1/image/arrival_6.jpg" alt="#">
+            </div>
+            <div class="arrivals-tag">
+              <p>Harry Potter</p>
+              <div class="arrivals-icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>
+              </div>
+            </div>
+          </div>
+          <div class="arrivals-card">
+            <div class="arrivals-image">
+              <img src="images/Book Store Website Part 1/Book Store Website Part 1/image/arrival_7.jpg" alt="#">
+            </div>
+            <div class="arrivals-tag">
+              <p>Hero Of Olympus</p>
+              <div class="arrivals-icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>
+              </div>
+            </div>
+          </div>
+          <div class="arrivals-card">
+            <div class="arrivals-image">
+              <img src="images/Book Store Website Part 1/Book Store Website Part 1/image/arrival_8.webp" alt="#">
+            </div>
+            <div class="arrivals-tag">
+              <p>Wimpy Kid</p>
+              <div class="arrivals-icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>
+              </div>
+            </div>
+          </div>
+          <div class="arrivals-card">
+            <div class="arrivals-image">
+              <img src="images/Book Store Website Part 1/Book Store Website Part 1/image/arrival_9.jpg" alt="#">
+            </div>
+            <div class="arrivals-tag">
+              <p>Ranger's Apprintice</p>
+              <div class="arrivals-icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>
+              </div>
+            </div>
+          </div>
+          <div class="arrivals-card">
+            <div class="arrivals-image">
+              <img src="images/Book Store Website Part 1/Book Store Website Part 1/image/arrival_10.jpg" alt="#">
+            </div>
+            <div class="arrivals-tag">
+              <p>Percy Jackson</p>
+              <div class="arrivals-icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="reviews">
+        <h1>Reviews</h1>
+        <div class="review-box">
+          <div class="review-card">
+            <i class="fa-solid fa-quote-right"></i>
+          <div class="card-top">
+            <img src="images/Book Store Website Part 1/Book Store Website Part 1/image/review_1.png" alt="#">
+          </div>
+          <div class="card">
+            <h2>John Deo</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor praesentium tempore quae ullam itaque ratione, dolores, laudantium tenetur atque porro minus aut debitis, nesciunt laborum facere iure vero cumque assumenda!</p>
+            <div class="review-icon">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+          </div>
+          </div>
+
+          <div class="review-card">
+            <i class="fa-solid fa-quote-right"></i>
+          <div class="card-top">
+            <img src="images/Book Store Website Part 1/Book Store Website Part 1/image/review_2.png" alt="#">
+          </div>
+          <div class="card">
+            <h2>John Deo</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor praesentium tempore quae ullam itaque ratione, dolores, laudantium tenetur atque porro minus aut debitis, nesciunt laborum facere iure vero cumque assumenda!</p>
+            <div class="review-icon">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+          </div>
+          </div>
+          
+          <div class="review-card">
+            <i class="fa-solid fa-quote-right"></i>
+          <div class="card-top">
+            <img src="images/Book Store Website Part 1/Book Store Website Part 1/image/review_3.png" alt="#">
+          </div>
+          <div class="card">
+            <h2>John Deo</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor praesentium tempore quae ullam itaque ratione, dolores, laudantium tenetur atque porro minus aut debitis, nesciunt laborum facere iure vero cumque assumenda!</p>
+            <div class="review-icon">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+          </div>
+          </div>
+
+          <div class="review-card">
+            <i class="fa-solid fa-quote-right"></i>
+          <div class="card-top">
+            <img src="images/Book Store Website Part 1/Book Store Website Part 1/image/review_4.png" alt="#">
+          </div>
+          <div class="card">
+            <h2>John Deo</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor praesentium tempore quae ullam itaque ratione, dolores, laudantium tenetur atque porro minus aut debitis, nesciunt laborum facere iure vero cumque assumenda!</p>
+            <div class="review-icon">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+          </div>
+          </div>
+        </div>
+
+      </div> -->
+
+      
+
+
+
+
+    <!--Blog-->
+    
+    <div class="blog">
+        <h1>Our Blog</h1>
+        <div class="blog_box">
+
+            <div class="blog_card">
+                <div class="blog_img">
+                    <img src="images/download.jpg">
+                </div>
+                <div class="blog_tag">
+                    <h2>Sherlock Holmes</h2>
+                    <p>
+                      Sherlock Holmes is a private detective who has keen powers of observation. He lives at 221b Baker Street in London. He notices things that others simply don't and then he draws accurate conclusions about what he sees
+                    </p>
+                    <div class="blog_icon">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog_card">
+                <div class="blog_img">
+                    <img src="images/Book Store Website Part 1/Book Store Website Part 1/image/blog_2.jpg">
+                </div>
+                <div class="blog_tag">
+                    <h2>Catherine House</h2>
+                    <p>
+                      A story about a dangerously curious young undergraduate whose rebelliousness leads her to discover a shocking secret involving an exclusive circle of students . . . and the dark truth beneath her school’s promise of prestige.
+                    </p>
+                    <div class="blog_icon">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog_card">
+                <div class="blog_img">
+                    <img src="images/Book Store Website Part 1/Book Store Website Part 1/image/blog_3.jpg">
+                </div>
+                <div class="blog_tag">
+                    <h2>The Switch</h2>
+                    <p>
+                      The Switch is a novel about interactions — from the hilarity of Eileen online dating or lounging with hipsters in London, Leena thinking her corporate consulting shtick will win over a village meeting of senior citizens, to interactions we often avoid and/or tackle in mindsets that are less than helpful.
+                    </p>
+                    <div class="blog_icon">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <!--Footer-->
+
+    
+
+      <section class="p-5 bg-dark">
+        <div class="container bg-dark">
+          <h2 class="text-center mb-3 text-light bg-dark">Frequently Asked Questions</h2>
+          <div class="accordion accordion-flush bg-dark" id="questions">
+            <div class="accordion-item ">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  <p class="lead fw-bold  text-light">
+                    How do we tackle online reading platforms like kindle,audible and audiobook?
+                  </p>
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#questions">
+                <div class="accordion-body">All of the above mentioned platforms are completely online, whereas in bookexchange we provide a hybrid platform for users to communicate with each other and exchange or rent their books through us.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  <p class="lead fw-bold text-light ">
+                    Is there any provision for purchase of books?
+                  </p>
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#questions">
+                <div class="accordion-body">Yes, through our bookstore we provide both the options of renting as well as purchase of the available books.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  <p class="lead fw-bold text-light">
+                  How do we tackle the physical condition of the books sold by the customers? 
+                  </p>
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#questions">
+                <div class="accordion-body">That is managed by our damage management department. While accepting the books from users, our team will ensure the well being of the physical condition of the book.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer_main">
+
+            <div class="tag">
+                <img src="images/Book Store Website Part 1/Book Store Website Part 1/image/logo.png">
+                <p>
+                    Stay Wild. 
+                    Keep Reading.
+                    We hope you loved our website.
+                </p>
+
+            </div>
+
+            <div class="tag">
+                <h1>Quick Link</h1>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Featured</a>
+                <a href="#">Arrivals</a>
+                <a href="#">Reviews</a>
+                <a href="#">Blog</a>
+                
+            </div>
+
+            <div class="tag">
+                <h1>Contact Info</h1>
+                <a href="#"><i class="fa-solid fa-phone"></i>+94 12 345 6789</a>
+                <a href="#"><i class="fa-solid fa-phone"></i>+94 32 444 699</a>
+                <a href="#"><i class="fa-solid fa-envelope"></i>bookstore123@gmail.com</a>
+                
+            </div>
+
+            <div class="tag">
+                <h1>Follow Us</h1>
+                <div class="social_link">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+                
+            </div>
+
+            <div class="tag">
+                <h1>Newsletter</h1>
+                <div class="search_bar">
+                    <input type="text" placeholder="You email id here">
+                    <button type="submit">Subscribe</button>
+                </div>                
+            </div>            
+            
+        </div>
+
+       
+
+    </footer>
+</body>
+</html>
